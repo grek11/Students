@@ -18,6 +18,13 @@
         android:entries="@array/students_groups" />
 
     <Button
+        android:id="@+id/bnt_grp_default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_grp_detail_txt"
+        android:onClick="onGrpBtnClick" />
+
+    <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -30,8 +37,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginBottom="16dp"
-        android:textSize="24sp"
-        />
+        android:textSize="20dp" />
 
 </LinearLayout>

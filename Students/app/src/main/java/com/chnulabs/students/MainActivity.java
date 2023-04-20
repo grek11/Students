@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
     private void runTimer() {
         final TextView timeView = (TextView)findViewById(R.id.textView);
         final Handler handler = new Handler();
+
         handler.post(new Runnable () {
             @Override
             public void run() {
@@ -73,5 +74,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         isRunning = false;
+    }
+
+    public void onGrpBtnClick(View view) {
+        Spinner spinner = (Spinner) findViewById(R.id.spinner);
+        String grpNumb = (String) spinner.getSelectedItem();
+
+        Intent intent = new Intent(this, StudentsGroupActivity.class);
+        intent.putExtra(StudentsGroupActivity.GROUP_NUMBER, grpNumb);
+
+        startActivity(intent);
     }
 }
